@@ -1,15 +1,18 @@
 from behave import *
 import boto3
+from bson import json_util
 import json
 from assertpy import assert_that
 
 client = None
+region = None
 
-
-@given('the region "{region}"')
-def step_impl(context, region):
+@given('the region "{_region}"')
+def step_impl(context, _region):
   global client
-  client = boto3.client('ec2', region_name='eu-west-3')
+  global region
+  region = _region
+  client = boto3.client('ec2', region_name=_region)
   pass
 
 
@@ -24,6 +27,15 @@ def step_impl(context):
   pass
 
 
-@when('we implement a test')
+@given('no EC2 instance')
 def step_impl(context):
-  assert True is False
+  filters = [
+    {
+      'Name': 'instance-state-name',
+      'Values': ['running']
+    }
+  ]
+  instances = client.describe_instances(Filters=filters).get('Reservations')
+  # print("coucou ", instances.get('Reservations'))
+  print("coucou ", json.dumps(instances, indent=2, sort_keys=True, default=json_util.default))
+  assert_that(instances).is_length(0)
