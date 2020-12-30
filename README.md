@@ -5,8 +5,18 @@
 
 <!--ts-->
 
-* [Documentation en français](#fr-description-du-projet)
-* [English Documentation (coming soon)](#gb-project-description-coming-soon )
+- [:fr: Description du projet](#-fr--description-du-projet)
+  * [lancement des tests (Python)](#lancement-des-tests--python-)
+    + [Pré-requis](#pr--requis)
+    + [Lancement des tests](#lancement-des-tests)
+  * [lancement des tests (Java)](#lancement-des-tests--java-)
+    + [Pré-requis](#pr--requis-1)
+    + [Lancement des tests](#lancement-des-tests-1)
+  * [Description des tests](#description-des-tests)
+- [:gb: Project Description (Coming soon)](#-gb--project-description--coming-soon-)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ---
 
