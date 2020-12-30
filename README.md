@@ -35,10 +35,21 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
   - `./$envName/bin/activate`
 3. Installation des dépendances
   - `pip install -r requirements.txt`
-4. Lancement des tests
+
+### Lancement des tests
+1. Se déplacer dans le répertoire de test
+  -`${project.basedir}/main`
+2. Lancer les tests
   - `behave`
 
 ## lancement des tests (Java)
+
+### Pré-requis
+
+1. aws CLI et authentification
+- `aws configure`
+
+### Lancement des tests
 
 1. Se déplacer dans le répertoire de test 
   -`${project.basedir}/main/test-java`
