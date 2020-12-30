@@ -1,11 +1,11 @@
-terraform {
-  # This module is now only being tested with Terraform 0.13.x. However, to make upgrading easier, we are setting
-  # 0.12.26 as the minimum version, as that version added support for required_providers with source URLs, making it
-  # forwards compatible with 0.13.x code.
-  required_version = ">= 0.12.26"
+provider "aws" {
+  region = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
-
-# website::tag::1:: The simplest possible Terraform module: it just outputs "Hello, World!"
-output "hello_world" {
-  value = "Hello, World!"
+module "my_ec2" {
+  source = "./terraform_modules/ec2"
+  count = var.instance_count
+  name = var.name
+  instance_type = var.instance_type
 }
