@@ -1,4 +1,4 @@
-# terraform-tdd-helloworld-poc
+# terraform-ec2module-bdd-demo
 
 :fr: Sommaire / :gb: Table of Contents
 =================
