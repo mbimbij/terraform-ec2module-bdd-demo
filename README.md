@@ -7,11 +7,7 @@
 
 - [:fr: Description du projet](#-fr--description-du-projet)
   * [lancement des tests (Python)](#lancement-des-tests--python-)
-    + [Pré-requis](#pr--requis)
-    + [Lancement des tests](#lancement-des-tests)
   * [lancement des tests (Java)](#lancement-des-tests--java-)
-    + [Pré-requis](#pr--requis-1)
-    + [Lancement des tests](#lancement-des-tests-1)
   * [Description des tests](#description-des-tests)
 - [:gb: Project Description (Coming soon)](#-gb--project-description--coming-soon-)
 
@@ -40,15 +36,19 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
 
 1. aws CLI et authentification
   - `aws configure`
+
 2. (optionel) (Création et) activation d'un environnement virtuel Python
   - `python -m venv $envName`
   - `./$envName/bin/activate`
+
 3. Installation des dépendances
   - `pip install -r requirements.txt`
 
 ### Lancement des tests
+
 1. Se déplacer dans le répertoire de test
   -`${project.basedir}/main`
+
 2. Lancer les tests
   - `behave`
 
@@ -61,8 +61,9 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
 
 ### Lancement des tests
 
-1. Se déplacer dans le répertoire de test 
+1. Se déplacer dans le répertoire de test
   -`${project.basedir}/main/test-java`
+
 2. Lancer les tests
   -`mvn clean test`
 
