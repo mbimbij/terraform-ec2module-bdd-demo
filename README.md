@@ -5,11 +5,11 @@
 
 <!--ts-->
 
-- [:fr: Description du projet](#-fr--description-du-projet)
-  * [lancement des tests (Python)](#lancement-des-tests--python-)
-  * [lancement des tests (Java)](#lancement-des-tests--java-)
+- [:fr: Description du projet](#fr-description-du-projet)
+  * [lancement des tests (Python)](#lancement-des-tests-python)
+  * [lancement des tests (Java)](#lancement-des-tests-java)
   * [Description des tests](#description-des-tests)
-- [:gb: Project Description (Coming soon)](#-gb--project-description--coming-soon-)
+- [:gb: Project Description (Coming soon)](#gb-project-description-coming-soon)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -36,19 +36,16 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
 
 1. aws CLI et authentification
   + `aws configure`
-
 2. (optionel) (Création et) activation d'un environnement virtuel Python
   + `python -m venv $envName`
   + `./$envName/bin/activate`
-
 3. Installation des dépendances
   + `pip install -r requirements.txt`
 
 ### Lancement des tests
 
 1. Se déplacer dans le répertoire de test 
-  +`${project.basedir}/test/default/python`
-
+  + `${project.basedir}/test/default/python`
 2. Lancer les tests
   + `behave`
 
@@ -62,10 +59,9 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
 ### Lancement des tests
 
 1. Se déplacer dans le répertoire de test
-  +`${project.basedir}/test/default/java`
-
+  + `${project.basedir}/test/default/java`
 2. Lancer les tests
-  +`mvn clean test`
+  + `mvn clean test`
 
 ## Description des tests
 
