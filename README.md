@@ -9,10 +9,12 @@
   * [Lancement des tests (Python)](#lancement-des-tests-python)
   * [Lancement des tests (Java)](#lancement-des-tests-java)
   * [Description des tests](#description-des-tests)
+  * [Commandes utiles](#commandes-utiles)
 - [:gb: Project Description](#gb-project-description)
   * [Launching Tests (Python)](#launching-tests-python)
   * [Launching Tests (Java)](#launching-tests-java)
   * [Tests description](#tests-description)
+  * [Useful commands](#useful-commands)
 
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -86,6 +88,31 @@ Feature: ec2 creation module
       | t2.micro      |
 ```
 
+## Commandes utiles
+
+Affichage du layout pour article de blog et documentation:
+
+```shell
+tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfirst
+.
+├── examples
+│   └── default
+│       ├── main.tf
+│       └── variables.tf
+├── test
+│   └── default
+│       ├── java
+│       ├── python
+│       └── create_ec2_intances_module.feature
+├── main.tf
+├── outputs.tf
+├── README.md
+└── variables.tf
+
+```
+
+
+
 # :gb: Project Description
 
 The goal of this project is to try to apply a "TDD" approach to "infrastructure as code" (it turned out to be more "BDD", but whatever). \
@@ -152,4 +179,27 @@ Feature: ec2 creation module
     Then there is exactly 1 instance with the following attributes
       | instance_type |
       | t2.micro      |
+```
+
+## Useful Commands
+
+Pretty-printing of the project layout, for blog article and documentation:
+
+```shell
+tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfirst
+.
+├── examples
+│   └── default
+│       ├── main.tf
+│       └── variables.tf
+├── test
+│   └── default
+│       ├── java
+│       ├── python
+│       └── create_ec2_intances_module.feature
+├── main.tf
+├── outputs.tf
+├── README.md
+└── variables.tf
+
 ```
