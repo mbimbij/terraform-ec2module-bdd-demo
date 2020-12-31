@@ -35,37 +35,37 @@ pour avoir une "single source of truth" / "golden source" quant à la spécifica
 ### Pré-requis
 
 1. aws CLI et authentification
-  - `aws configure`
+  + `aws configure`
 
 2. (optionel) (Création et) activation d'un environnement virtuel Python
-  - `python -m venv $envName`
-  - `./$envName/bin/activate`
+  + `python -m venv $envName`
+  + `./$envName/bin/activate`
 
 3. Installation des dépendances
-  - `pip install -r requirements.txt`
+  + `pip install -r requirements.txt`
 
 ### Lancement des tests
 
-1. Se déplacer dans le répertoire de test
-  -`${project.basedir}/main`
+1. Se déplacer dans le répertoire de test 
+  +`${project.basedir}/test/default/python`
 
 2. Lancer les tests
-  - `behave`
+  + `behave`
 
 ## lancement des tests (Java)
 
 ### Pré-requis
 
 1. aws CLI et authentification
-- `aws configure`
+  + `aws configure`
 
 ### Lancement des tests
 
 1. Se déplacer dans le répertoire de test
-  -`${project.basedir}/main/test-java`
+  +`${project.basedir}/test/default/java`
 
 2. Lancer les tests
-  -`mvn clean test`
+  +`mvn clean test`
 
 ## Description des tests
 

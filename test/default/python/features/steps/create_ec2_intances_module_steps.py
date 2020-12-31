@@ -1,9 +1,6 @@
-from behave import *
 import boto3
-from bson import json_util
-import json
 from assertpy import assert_that
-from python_terraform import *
+from behave import *
 
 running_instances_filter = [
   {
@@ -11,7 +8,6 @@ running_instances_filter = [
     'Values': ['running']
   }
 ]
-
 
 @given('the region "{region}"')
 def step_impl(context, region):

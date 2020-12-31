@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
     "json:target/cucumber.json", "junit:target/cucumber-results.xml",
     "pretty:target/cucumber-pretty.txt", "usage:target/cucumber-usage.json"},
     glue = {"com.example"},
-    features = "../features")
+    features = "..")
 public class RunCucumberTest {
 }

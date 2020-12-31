@@ -26,16 +26,17 @@ public class Ec2ModuleTestStepDefs {
   private Ec2Client ec2Client;
   private Region region;
   private String correlationId;
+  private String terraformScriptPath = "../../../examples/default";
 
   @Before
   public void setUp() {
     correlationId = UUID.randomUUID().toString();
-    Utils.executeLinuxShellCommand("terraform init", Paths.get(".."));
+    Utils.executeLinuxShellCommand("terraform init", Paths.get(terraformScriptPath));
   }
 
   @After
   public void tearDown(){
-    Utils.executeLinuxShellCommand("terraform destroy -auto-approve", Paths.get(".."));
+    Utils.executeLinuxShellCommand("terraform destroy -auto-approve", Paths.get(terraformScriptPath));
   }
 
   @Given("the region {string}")
@@ -73,7 +74,7 @@ public class Ec2ModuleTestStepDefs {
     String instanceName = String.format("test-ec2-instance-%s", correlationId);
 
     String args = String.format("-var 'instance_type=%s' -var 'instance_count=%s' -var 'name=%s'", instanceType, instanceCount, instanceName);
-    int exitValue = Utils.executeLinuxShellCommand(String.format("terraform apply -auto-approve %s", args), Paths.get(".."));
+    int exitValue = Utils.executeLinuxShellCommand(String.format("terraform apply -auto-approve %s", args), Paths.get(terraformScriptPath));
     log.info("executed with return value {}", exitValue);
   }
 
