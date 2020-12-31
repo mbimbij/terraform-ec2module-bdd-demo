@@ -111,6 +111,9 @@ tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfi
 
 ```
 
+Conversion `.png` en `.jpg`:
+
+`convert image.png -background white -flatten -alpha off image.jpg`
 
 
 # :gb: Project Description
@@ -203,3 +206,7 @@ tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfi
 └── variables.tf
 
 ```
+
+Converting `.png` to `.jpg`:
+
+`convert image.png -background white -flatten -alpha off image.jpg`

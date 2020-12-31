@@ -1,13 +1,13 @@
 
 ---
-title: Behaviour-Driven Infrastructure-as-Code &#x2764;
-date: 12:00 12/31/2020
+title: Behaviour-Driven  Infrastructure-as-Code &#x2764;
+date: 12:30 12/31/2020
 author: Joseph M'Bimbi-Bene
 hero_classes: 'text-light overlay-dark-gradient'
-hero_image: logo.png
+hero_image: Logo.jpg
 taxonomy:
-category: blog
-tag: [devops, bdd]
+    category: blog
+    tag: [devops]
 ---
 
 Dans cette article, nous allons investiguer la testabilité de modules `Terraform` en y ajoutant du `Cucumber`.
@@ -39,17 +39,17 @@ Ce n'est pas une question de "métier / technique", ou autre.
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-###  <a name="introduction-description-du-projet"></a>œ Introduction, Description du projet
+###  <a name="introduction-description-du-projet"></a> Introduction, Description du projet
 
-Le but de ce projet est de chercher à appliquer une approche TDD à de "l'infra as code". \
-Pour Démarrer, on va juste chercher à créer en TDD une instance EC2 dans un compte AWS de test. \
+Le but de ce projet est de chercher à appliquer une approche TDD à de "l'infra as code". 
+Pour Démarrer, on va juste chercher à créer en TDD une instance EC2 dans un compte AWS de test. 
 On élaborera des cas plus sophistiqués par la suite.
 
 Les tests sont décrits avec `Cucumber` / `Gherkin`, et il y a une implémentation des steps:
 - en Python
 - en Java
 
-Par la suite, nous essaierons d'implémenter des tests via `Terratest`. \
+Par la suite, nous essaierons d'implémenter des tests via `Terratest`. 
 On investiguera s'il y a une implémentation `go` de `Cucumber` et s'il est possible de le mixer avec `Terratest`
 pour avoir une "single source of truth" / "golden source" quant à la spécification des tests, et ce même cross-langage !
 
@@ -72,10 +72,10 @@ Feature: ec2 creation module
       | t2.micro      |
 ```
 
-### Résultat de l'éxécution des tests
+### <a name="résultat-de-l-éxécution-des-tests"></a> Résultat de l'éxécution des tests
 Voici des captures d'écran de l'éxécution de ces tests
 
-#### En java
+#### <a name="en-java"></a> En java
 ##### Via l'IDE
 
 Configuration de l'IDE:
@@ -89,11 +89,11 @@ Résultats:
 
 ![](java_cli_results.png)
 
-#### En python
+#### <a name="en-python"></a> En python
 
 ![](python_cli_results.png)
 
-### Arborescence de fichier
+### <a name="arborescence-de-fichier"></a> Arborescence de fichier
 
 ```shell
 tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfirst
@@ -114,7 +114,8 @@ tree -L 3 -I "terraform-tdd|terraform-tdd-helloworld-poc.iml|*tfstate*" --dirsfi
 
 ```
 
-### Références
+### <a name="références"></a> Références
 
 - [How to Build Reusable, Composable, Battle tested Terraform Modules](https://www.youtube.com/watch?v=LVgP63BkhKQ)
 - [5 Lessons Learned From Writing Over 300,000 Lines of Infrastructure Code](https://www.youtube.com/watch?v=RTEgE2lcyk4)
+- le repo [github](https://github.com/mbimbij/terraform-ec2module-bdd-demo)
