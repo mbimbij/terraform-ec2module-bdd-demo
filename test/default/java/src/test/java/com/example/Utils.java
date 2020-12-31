@@ -26,11 +26,8 @@ public class Utils {
   public static int executeLinuxShellCommand(String command, Path executionPath) {
     log.info("executing command: \"{}\"", command);
     ProcessBuilder builder = new ProcessBuilder();
-//    builder.command("/bin/bash", "-c", "\""+command+"\"");
-//    builder.command(command);
     builder.command("sh", "-c", command);
     builder.directory(executionPath.toFile());
-//    builder.directory(new File(System.getProperty("user.home")));
     Process process = builder.start();
     StreamGobbler streamGobbler =
         new StreamGobbler(process.getInputStream(), System.out::println);
