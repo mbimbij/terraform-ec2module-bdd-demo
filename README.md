@@ -36,6 +36,8 @@ Par la suite, nous essaierons d'implémenter des tests via `Terratest`. \
 On investiguera s'il y a une implémentation `go` de `Cucumber` et s'il est possible de le mixer avec `Terratest`
 pour avoir une "single source of truth" / "golden source" quant à la spécification des tests, et ce même cross-langage !
 
+Un article de blog en relation avec ce projet est disponible à https://joseph-mbimbi.fr/blog/bdd-terraform 
+
 ## Lancement des tests (Python)
 
 ### Pré-requis
@@ -131,6 +133,8 @@ We will then further investigate if there is a `go` implementation for `Cucumber
 so that we have some sort of a "single source of truth" / "golden source" for test specifications, regardless of the language,
 and that would prevent specification drift if there is 1 feature file for each language / framework, that would be very likely be
 get out of sync.
+
+A blog article relative to this project is available at https://joseph-mbimbi.fr/blog/bdd-terraform
 
 ## Launching tests (Python)
 
